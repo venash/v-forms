@@ -145,6 +145,31 @@
           }
         }
       }
+    },
+    "v-forms": {
+      "projectType": "library",
+      "root": "libs/v-forms",
+      "sourceRoot": "libs/v-forms/src",
+      "prefix": "venash-forms",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/v-forms/src/**/*.ts",
+              "libs/v-forms/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/v-forms"],
+          "options": {
+            "jestConfig": "libs/v-forms/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
