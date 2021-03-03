@@ -1,0 +1,19 @@
+*:focus {
+  outline: none;
+}
+
+v-forms-text {
+  &.ng-invalid {
+    input {
+      border-color: red;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .p-inputtext[readonly] {
+    background-color: lightgrey;
+  }
+
+}

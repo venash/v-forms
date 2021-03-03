@@ -1,0 +1,56 @@
+<div class="screen-content">
+
+  <div class="screen-content-inner">
+    <h4>Reactive forms</h4>
+    <p>StartsWithCZ validator is set in FormControl</p>
+    <div [formGroup]="formGroup">
+
+      <v-forms-input>
+        <v-forms-text formControlName="text">
+        </v-forms-text>
+      </v-forms-input>
+
+    </div>
+    <v-form-group-debugger [formGroup]="formGroup">
+    </v-form-group-debugger>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="screen-content-inner">
+    <h4>Reactive forms</h4>
+    <p>StartsWithCZ validator is set through directive</p>
+    <div [formGroup]="formGroup2">
+
+      <v-forms-input>
+        <v-forms-text formControlName="text" startWithCz>
+        </v-forms-text>
+      </v-forms-input>
+
+    </div>
+    <v-form-group-debugger [formGroup]="formGroup2">
+    </v-form-group-debugger>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="screen-content-inner">
+    <h4>Template-driven forms</h4>
+    <p>StartsWithCZ validator is set through directive</p>
+    <div>
+
+      <v-forms-input>
+        <v-forms-text [(ngModel)]="templateDrivenText"
+                      startWithCz
+                      required>
+        </v-forms-text>
+      </v-forms-input>
+    </div>
+
+    <div>Debug</div>
+    <small><strong>value:</strong> {{templateDrivenText}}</small>
+
+  </div>
+</div>

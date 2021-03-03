@@ -1,0 +1,20 @@
+<div class="screen-content">
+
+  <div [formGroup]="formGroup">
+
+    <v-forms-input [label]="'Name'">
+      <v-forms-text formControlName="text"></v-forms-text>
+    </v-forms-input>
+
+    <v-forms-input [label]="'Disabled Input'">
+      <v-forms-text formControlName="disabled"
+        [disabled]="true">
+      </v-forms-text>
+    </v-forms-input>
+
+  </div>
+
+  <v-form-group-debugger [formGroup]="formGroup"
+  ></v-form-group-debugger>
+
+</div>

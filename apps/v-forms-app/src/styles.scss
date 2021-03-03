@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  background-color: #d2d2d2;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+$headerHeight: 40px;
+
+header {
+  background-color: #fff;
+  width: 100%;
+  height: $headerHeight;
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-left: 8px;
+  h3 {
+    margin: auto 0;
+  }
+}
+
+@import "styles/screen";
+@import "styles/colors";
+@import "styles/layout";
+@import "styles/typography";

@@ -14,13 +14,13 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "venash-forms",
+            "prefix": "v-forms",
             "style": "camelCase"
           }
         ],
         "@angular-eslint/component-selector": [
           "error",
-          { "type": "element", "prefix": "venash-forms", "style": "kebab-case" }
+          { "type": "element", "prefix": "v-forms", "style": "kebab-case" }
         ]
       }
     },

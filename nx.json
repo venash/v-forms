@@ -16,8 +16,14 @@
     }
   },
   "projects": {
-    "v-forms-app": { "tags": [] },
-    "v-forms-app-e2e": { "tags": [], "implicitDependencies": ["v-forms-app"] },
-    "v-forms": { "tags": [] }
+    "v-forms-app": { "tags": ["domain:app", "type:utils"] },
+    "v-forms-app-e2e": {
+      "tags": ["domain:app", "type:utils"],
+      "implicitDependencies": ["v-forms-app"]
+    },
+    "v-forms": { "tags": ["domain:app"] },
+    "v-logger": { "tags": ["type:utils"] },
+    "v-debug-tools": { "tags": ["type:utils"] },
+    "v-utils": { "tags": ["type:utils"] }
   }
 }

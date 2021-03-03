@@ -51,7 +51,12 @@
               "apps/v-forms-app/src/favicon.ico",
               "apps/v-forms-app/src/assets"
             ],
-            "styles": ["apps/v-forms-app/src/styles.scss"],
+            "styles": [
+              "apps/v-forms-app/src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -166,6 +171,81 @@
           "outputs": ["coverage/libs/v-forms"],
           "options": {
             "jestConfig": "libs/v-forms/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "v-logger": {
+      "projectType": "library",
+      "root": "libs/v-logger",
+      "sourceRoot": "libs/v-logger/src",
+      "prefix": "venash-forms",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/v-logger/src/**/*.ts",
+              "libs/v-logger/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/v-logger"],
+          "options": {
+            "jestConfig": "libs/v-logger/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "v-debug-tools": {
+      "projectType": "library",
+      "root": "libs/v-debug-tools",
+      "sourceRoot": "libs/v-debug-tools/src",
+      "prefix": "venash-forms",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/v-debug-tools/src/**/*.ts",
+              "libs/v-debug-tools/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/v-debug-tools"],
+          "options": {
+            "jestConfig": "libs/v-debug-tools/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "v-utils": {
+      "projectType": "library",
+      "root": "libs/v-utils",
+      "sourceRoot": "libs/v-utils/src",
+      "prefix": "venash-forms",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/v-utils/src/**/*.ts",
+              "libs/v-utils/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/v-utils"],
+          "options": {
+            "jestConfig": "libs/v-utils/jest.config.js",
             "passWithNoTests": true
           }
         }

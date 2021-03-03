@@ -1,0 +1,15 @@
+.screen {
+
+  &-content {
+    background-color: white;
+    padding: 20px 12px;
+    margin: 12px;
+
+    &-inner {
+      padding: 16px 12px;
+      border: 1px dotted black;
+    }
+
+  }
+
+}

@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@venash-forms/v-forms": ["libs/v-forms/src/index.ts"]
+      "@venash-forms/v-forms": ["libs/v-forms/src/index.ts"],
+      "@venash-forms/v-logger": ["libs/v-logger/src/index.ts"],
+      "@venash-forms/v-debug-tools": ["libs/v-debug-tools/src/index.ts"],
+      "@venash-forms/v-utils": ["libs/v-utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,7 @@
+<input type="text"
+       pInputText
+       [(ngModel)]="value"
+       [id]="uid"
+       [readOnly]="readonly"
+       [attr.disabled]="disabled"
+       [tabIndex]="(readonly || disabled) ? -1 : null"/>

@@ -1,0 +1,11 @@
+<hr>
+<div>Debug</div>
+<div style="margin-top: 5px">
+  <small><strong>FormGroup Status:</strong> {{ groupStatus }}</small>
+</div>
+<div *ngFor="let info of formControlInfo" style="margin-top: 5px">
+  <small>
+    <strong>FormControl:</strong> '{{info.formControlName}}' | <strong>value:</strong> {{info.value}} | <strong>valid:</strong> {{info.valid}}
+  </small>
+</div>
+
