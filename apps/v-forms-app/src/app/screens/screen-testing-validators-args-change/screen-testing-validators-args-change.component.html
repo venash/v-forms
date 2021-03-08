@@ -1,5 +1,5 @@
 <div class="screen-content">
-  <p>Showcase startsWith validator usage with Input() prefix. Valid Values is EN</p>
+
   <div class="screen-content-inner">
     <h4>Reactive forms</h4>
     <p>StartsWith validator is set in FormControl</p>
@@ -24,7 +24,7 @@
     <div [formGroup]="formGroup2">
 
       <v-forms-input>
-        <v-forms-text formControlName="text" startWith [prefix]="'EN'">
+        <v-forms-text formControlName="text" startWith [prefix]="prefix">
         </v-forms-text>
       </v-forms-input>
 
@@ -43,7 +43,7 @@
 
       <v-forms-input>
         <v-forms-text [(ngModel)]="templateDrivenText"
-                      startWith [prefix]="'EN'"
+                      startWith [prefix]="prefix"
                       required>
         </v-forms-text>
       </v-forms-input>

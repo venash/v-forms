@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -6,14 +6,19 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
   templateUrl: './screen-basic-form.component.html',
   styleUrls: ['./screen-basic-form.component.scss']
 })
-export class ScreenBasicFormComponent {
+export class ScreenBasicFormComponent implements OnInit{
+
+  formGroup: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
   }
 
-  formGroup: FormGroup = this.formBuilder.group({
-    text: ['EEE', [Validators.required]],
-    date: []
-  })
+  ngOnInit(): void {
+    this.formGroup = this.formBuilder.group({
+      text: ['FOO', [Validators.required]],
+      date: []
+    })
+  }
+
 
 }

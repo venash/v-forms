@@ -13,7 +13,7 @@ import {VInputControls} from '../v-input-controls';
     }
   ],
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class VTextComponent extends VBaseComponent {
 

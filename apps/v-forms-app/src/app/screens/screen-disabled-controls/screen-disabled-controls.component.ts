@@ -7,11 +7,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./screen-disabled-controls.component.scss']
 })
 export class ScreenDisabledControlsComponent implements OnInit {
+
   formGroup: FormGroup;
 
   ngOnInit(): void {
     this.formGroup = new FormGroup({
-      text: new FormControl('EEE', [
+      text: new FormControl('FOO', [
         Validators.maxLength(2),
         Validators.required,
         Validators.max(2)

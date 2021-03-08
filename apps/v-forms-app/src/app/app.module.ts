@@ -17,6 +17,7 @@ import { VDebugToolsModule } from '@venash-forms/v-debug-tools';
 import { ScreenDisabledControlsComponent } from './screens/screen-disabled-controls/screen-disabled-controls.component';
 import { ScreenTestingValidatorsComponent } from './screens/screen-testing-validators/screen-testing-validators.component';
 import { ScreenTestingValidatorsWithArgumentsComponent } from './screens/screen-testing-validators-with-arguments/screen-testing-validators-with-arguments.component';
+import { ScreenTestingValidatorsArgsChangeComponent } from './screens/screen-testing-validators-args-change/screen-testing-validators-args-change.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ScreenTestingValidatorsWithArgumentsComponent } from './screens/screen-
     ScreenBasicFormComponent,
     ScreenDisabledControlsComponent,
     ScreenTestingValidatorsComponent,
-    ScreenTestingValidatorsWithArgumentsComponent
+    ScreenTestingValidatorsWithArgumentsComponent,
+    ScreenTestingValidatorsArgsChangeComponent
   ],
   imports: [
     BrowserModule,

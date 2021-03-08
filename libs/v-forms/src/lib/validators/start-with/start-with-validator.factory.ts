@@ -9,7 +9,8 @@ export function startWith(prefix: string): ValidatorFn {
     if (value && !value.startsWith(prefix)) {
       return {
         startWith: {
-          valid: false
+          valid: false,
+          requiredPrefix: prefix,
         }
       }
     }

@@ -19,11 +19,11 @@ export class ScreenTestingValidatorsComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
-      text: ['EEE', [Validators.required, VValidators.startWithCZ]],
+      text: ['FOO', [Validators.required, VValidators.startWithCZ]],
     })
 
     this.formGroup2 = this.formBuilder.group({
-      text: ['E', [Validators.required]],
+      text: ['FOO', [Validators.required]],
     })
 
   }
