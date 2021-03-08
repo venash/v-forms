@@ -30,10 +30,10 @@ export class ScreenTestingValidatorsArgsChangeComponent implements OnInit {
 
     this.templateDrivenText = 'EN';
 
-    this.changePrefix('EG');
+    this.changePrefixLater('EG');
   }
 
-  changePrefix(newPrefix: string) {
+  changePrefixLater(newPrefix: string) {
     setTimeout(() => {
       this.prefix = newPrefix;
     }, 1500);
