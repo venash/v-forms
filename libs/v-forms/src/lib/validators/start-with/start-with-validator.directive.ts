@@ -1,4 +1,4 @@
-import {FormControl, NG_VALIDATORS, Validator} from '@angular/forms';
+import {FormControl, NG_VALIDATORS, ValidationErrors, Validator} from '@angular/forms';
 import {Directive, forwardRef, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {startWith} from './start-with-validator.factory';
 
@@ -23,7 +23,7 @@ export class StartWithValidatorDirective implements Validator, OnChanges {
 
   private _onChange: () => void;
 
-  validate(c: FormControl) {
+  validate(c: FormControl): ValidationErrors | null {
     return startWith(this.prefix)(c);
   }
 
