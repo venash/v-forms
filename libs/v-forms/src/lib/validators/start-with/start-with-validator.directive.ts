@@ -1,5 +1,5 @@
 import {FormControl, NG_VALIDATORS, Validator} from '@angular/forms';
-import {Directive, forwardRef, Input, SimpleChanges} from '@angular/core';
+import {Directive, forwardRef, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {startWith} from './start-with-validator.factory';
 
 @Directive({
@@ -16,7 +16,7 @@ import {startWith} from './start-with-validator.factory';
   ]
 })
 // eslint-disable-next-line @angular-eslint/directive-class-suffix
-export class StartWithValidatorDirective implements Validator {
+export class StartWithValidatorDirective implements Validator, OnChanges {
 
   @Input()
   prefix: string;
