@@ -18,6 +18,7 @@ import {startWith} from './start-with-validator.factory';
 // eslint-disable-next-line @angular-eslint/directive-class-suffix
 export class StartWithValidatorDirective implements Validator, OnChanges {
 
+  // vymyslet nazev spojeny s direktivou
   @Input()
   prefix: string;
 

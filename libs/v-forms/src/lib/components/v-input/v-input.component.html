@@ -3,6 +3,7 @@
     {{label}}<span *ngIf="isRequired()" class="c-red"> *</span>
   </label>
   <ng-content></ng-content>
+  <!-- TODO: udelat komponentu -->
   <div *ngIf="firstError" class="v-input-error">{{firstError}}</div>
 </div>
 

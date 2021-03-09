@@ -3,6 +3,8 @@ import {Directive, Input} from '@angular/core';
 import {VInputControls} from './v-input-controls';
 import {RandomUtils} from '@venash-forms/v-utils';
 
+const noop = () => {};
+
 @Directive()
 // eslint-disable-next-line @angular-eslint/directive-class-suffix
 export abstract class VBaseComponent
@@ -39,9 +41,9 @@ export abstract class VBaseComponent
 
   readonly uid: string = RandomUtils.randomId();
 
-  onChange: any = () => {}
+  onChange: any = noop;
 
-  onTouch: any = () => {}
+  onTouch: any = noop;
 
   registerOnChange(fn: any): void {
     this.onChange = fn;

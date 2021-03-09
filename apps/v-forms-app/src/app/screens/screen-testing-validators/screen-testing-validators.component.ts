@@ -26,6 +26,10 @@ export class ScreenTestingValidatorsComponent implements OnInit {
       text: ['FOO', [Validators.required]],
     })
 
+    setTimeout(() => {
+      this.formGroup.get('text').setValidators([Validators.required]);
+    }, 2000);
+
   }
 
 }
