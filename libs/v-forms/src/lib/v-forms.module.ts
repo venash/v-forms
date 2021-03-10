@@ -8,6 +8,7 @@ import {VDatePickerComponent} from './components/v-date-picker/v-date-picker.com
 import {CalendarModule} from 'primeng/calendar';
 import {StartWithCzValidatorDirective} from './validators/start-with-cz/start-with-cz-validator.directive';
 import {StartWithValidatorDirective} from './validators/start-with/start-with-validator.directive';
+import { VSelectComponent } from './components/v-select/v-select.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import {StartWithValidatorDirective} from './validators/start-with/start-with-va
     VDatePickerComponent,
     StartWithCzValidatorDirective,
     StartWithValidatorDirective,
+    VSelectComponent,
   ],
   exports: [
     VInputComponent,
