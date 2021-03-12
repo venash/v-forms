@@ -18,6 +18,9 @@ import { ScreenDisabledControlsComponent } from './screens/screen-disabled-contr
 import { ScreenTestingValidatorsComponent } from './screens/screen-testing-validators/screen-testing-validators.component';
 import { ScreenTestingValidatorsWithArgumentsComponent } from './screens/screen-testing-validators-with-arguments/screen-testing-validators-with-arguments.component';
 import { ScreenTestingValidatorsArgsChangeComponent } from './screens/screen-testing-validators-args-change/screen-testing-validators-args-change.component';
+import { ScreenCountryPercentageComponent } from './screens/screen-country-percentage/screen-country-percentage.component';
+import { ScreenAddressComponent } from './screens/screen-address/screen-address.component';
+import {VComplexFormsModule} from '@venash-forms/v-complex-forms';
 
 @NgModule({
   declarations: [
@@ -27,11 +30,14 @@ import { ScreenTestingValidatorsArgsChangeComponent } from './screens/screen-tes
     ScreenDisabledControlsComponent,
     ScreenTestingValidatorsComponent,
     ScreenTestingValidatorsWithArgumentsComponent,
-    ScreenTestingValidatorsArgsChangeComponent
+    ScreenTestingValidatorsArgsChangeComponent,
+    ScreenCountryPercentageComponent,
+    ScreenAddressComponent
   ],
   imports: [
     BrowserModule,
     VFormsModule,
+    VComplexFormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MenuModule,

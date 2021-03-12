@@ -20,6 +20,20 @@
       </v-forms-date-picker>
     </v-forms-input>
 
+    <v-forms-input [label]="'Date picker'">
+      <v-forms-select formControlName="select"
+                      [items]="countries"
+                      [bindLabel]="'name'">
+      </v-forms-select>
+    </v-forms-input>
+
+    <v-forms-input [label]="'Amount'">
+      <v-forms-number formControlName="amount"
+                      mode="currency"
+                      currency="CZK">
+      </v-forms-number>
+    </v-forms-input>
+
   </div>
 
   <v-form-group-debugger [formGroup]="formGroup">

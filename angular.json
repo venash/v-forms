@@ -250,6 +250,31 @@
           }
         }
       }
+    },
+    "v-complex-forms": {
+      "projectType": "library",
+      "root": "libs/v-complex-forms",
+      "sourceRoot": "libs/v-complex-forms/src",
+      "prefix": "venash-forms",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/v-complex-forms/src/**/*.ts",
+              "libs/v-complex-forms/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/v-complex-forms"],
+          "options": {
+            "jestConfig": "libs/v-complex-forms/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

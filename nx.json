@@ -24,6 +24,7 @@
     "v-forms": { "tags": ["domain:app"] },
     "v-logger": { "tags": ["type:utils"] },
     "v-debug-tools": { "tags": ["type:utils"] },
-    "v-utils": { "tags": ["type:utils"] }
+    "v-utils": { "tags": ["type:utils"] },
+    "v-complex-forms": { "tags": ["domain:app", "type:utils"] }
   }
 }

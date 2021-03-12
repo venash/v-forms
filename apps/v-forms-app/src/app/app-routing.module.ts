@@ -9,6 +9,10 @@ import {
 import {
   ScreenTestingValidatorsArgsChangeComponent
 } from './screens/screen-testing-validators-args-change/screen-testing-validators-args-change.component';
+import {
+  ScreenCountryPercentageComponent
+} from './screens/screen-country-percentage/screen-country-percentage.component';
+import {ScreenAddressComponent} from './screens/screen-address/screen-address.component';
 
 const routes: Routes = [
   {
@@ -30,6 +34,14 @@ const routes: Routes = [
   {
     path: 'screen-testing-validators-args-change',
     component: ScreenTestingValidatorsArgsChangeComponent
+  },
+  {
+    path: 'screen-country-percentage',
+    component: ScreenCountryPercentageComponent
+  },
+  {
+    path: 'screen-address',
+    component: ScreenAddressComponent
   }
 ];
 

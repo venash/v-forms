@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {VBaseComponent} from '../v-base.component';
+import {VInputControls} from '../v-input-controls';
 
 @Component({
-  selector: 'venash-forms-v-select',
+  selector: 'v-forms-select',
   templateUrl: './v-select.component.html',
-  styleUrls: ['./v-select.component.scss']
+  styleUrls: ['./v-select.component.scss'],
+  providers: [
+    {
+      provide: VInputControls, useExisting: VSelectComponent
+    }
+  ],
 })
-export class VSelectComponent implements OnInit {
+export class VSelectComponent extends VBaseComponent {
 
-  constructor() { }
+  @Input()
+  multiple = false;
 
-  ngOnInit(): void {
-  }
+  @Input()
+  items: any[];
+
+  @Input()
+  bindLabel: string;
+
+
 
 }

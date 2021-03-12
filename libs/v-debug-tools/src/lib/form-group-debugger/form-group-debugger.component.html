@@ -5,7 +5,7 @@
 </div>
 <div *ngFor="let info of formControlInfo" style="margin-top: 5px">
   <small>
-    <strong>FormControl:</strong> '{{info.formControlName}}' | <strong>value:</strong> {{info.value}} | <strong>valid:</strong> {{info.valid}}
+    <strong>FormControl:</strong> '{{info.formControlName}}' | <strong>value:</strong> {{info.value | json}} | <strong>valid:</strong> {{info.valid}}
   </small>
 </div>
 
