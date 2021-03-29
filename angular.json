@@ -275,6 +275,31 @@
           }
         }
       }
+    },
+    "country": {
+      "projectType": "library",
+      "root": "libs/country",
+      "sourceRoot": "libs/country/src",
+      "prefix": "venash-forms",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/country/src/**/*.ts",
+              "libs/country/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/country"],
+          "options": {
+            "jestConfig": "libs/country/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

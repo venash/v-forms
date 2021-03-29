@@ -35,6 +35,11 @@ export class ScreenTestingValidatorsArgsChangeComponent implements OnInit {
 
   changePrefixLater(newPrefix: string) {
     setTimeout(() => {
+      this.formGroup.get('text').setValidators(
+        [Validators.required, VValidators.startWith(newPrefix)]
+      );
+      this.formGroup.get('text').updateValueAndValidity();
+
       this.prefix = newPrefix;
     }, 1500);
   }

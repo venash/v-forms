@@ -21,6 +21,7 @@ import { ScreenTestingValidatorsArgsChangeComponent } from './screens/screen-tes
 import { ScreenCountryPercentageComponent } from './screens/screen-country-percentage/screen-country-percentage.component';
 import { ScreenAddressComponent } from './screens/screen-address/screen-address.component';
 import {VComplexFormsModule} from '@venash-forms/v-complex-forms';
+import { ScreenAddressComplexComponent } from './screens/screen-address-complex/screen-address-complex.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +33,11 @@ import {VComplexFormsModule} from '@venash-forms/v-complex-forms';
     ScreenTestingValidatorsWithArgumentsComponent,
     ScreenTestingValidatorsArgsChangeComponent,
     ScreenCountryPercentageComponent,
-    ScreenAddressComponent
+    ScreenAddressComponent,
+    ScreenAddressComplexComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     VFormsModule,
     VComplexFormsModule,
@@ -47,7 +50,6 @@ import {VComplexFormsModule} from '@venash-forms/v-complex-forms';
       logFormatterType: PoorVLogFormatterService
     }),
     VDebugToolsModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

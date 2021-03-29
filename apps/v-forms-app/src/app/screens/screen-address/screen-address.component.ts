@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'venash-forms-screen-address',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScreenAddressComponent implements OnInit {
 
-  constructor() { }
+  formGroup: FormGroup;
 
   ngOnInit(): void {
+    this.formGroup = new FormGroup({
+      address: new FormControl()
+    })
   }
+
 
 }

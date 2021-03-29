@@ -27,7 +27,9 @@ export abstract class VBaseComponent
 
   constructor(private readonly control: NgControl) {
     this.ngControl = control;
-    this.ngControl.valueAccessor = this;
+    if (this.control) {
+      this.ngControl.valueAccessor = this;
+    }
   }
 
   @Input()

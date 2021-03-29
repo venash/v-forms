@@ -60,7 +60,6 @@ export class FormGroupDebuggerComponent
     this.formGroup.statusChanges
       .pipe(startWith(this.formGroup.status), takeUntil(this.destroy$))
       .subscribe((status) => {
-        this.logger.debug(status);
         this.groupStatus = status;
       });
   }
@@ -71,7 +70,6 @@ export class FormGroupDebuggerComponent
         startWith(this.formGroup.getRawValue()),
         takeUntil(this.destroy$))
       .subscribe((data) => {
-        this.logger.debug('ValueChanges', data);
         this.formControlInfo = this.extractFormControlInfo();
       });
   }

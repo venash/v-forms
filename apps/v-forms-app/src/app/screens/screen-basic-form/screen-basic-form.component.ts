@@ -1,10 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Country, CountryFacade} from '@venash-forms/country';
 
-export interface Country {
-  name: string;
-  code: string;
-}
 
 @Component({
   selector: 'venash-forms-screen-basic-form',
@@ -26,7 +23,10 @@ export class ScreenBasicFormComponent implements OnInit{
 
   formGroup: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private countryFacade: CountryFacade,
+  ) {
   }
 
   ngOnInit(): void {

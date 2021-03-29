@@ -3,16 +3,5 @@
     {{label}}<span *ngIf="isRequired()" class="c-red"> *</span>
   </label>
   <ng-content></ng-content>
-  <!-- TODO: udelat komponentu -->
-  <div *ngIf="firstError" class="v-input-error">{{firstError}}</div>
+  <v-forms-input-error [errors]="child?.ngControl?.errors"></v-forms-input-error>
 </div>
-
-<!--
-<div class="input">
-  <label *ngIf="label != null"
-         [attr.for]="componentId"
-         [class.required]="hasRequiredChildren()"
-         (click)="markAsTouched()" [innerHtml]="label"></label>
-  <ng-content></ng-content>
-  <label *ngIf="isTouchedAndInvalid()" class="error" [attr.for]="componentId">{{ errorMessage }}</label>
-</div>-->

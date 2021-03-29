@@ -23,6 +23,4 @@ export class VSelectComponent extends VBaseComponent {
   @Input()
   bindLabel: string;
 
-
-
 }

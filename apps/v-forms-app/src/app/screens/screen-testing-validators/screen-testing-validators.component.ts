@@ -25,11 +25,6 @@ export class ScreenTestingValidatorsComponent implements OnInit {
     this.formGroup2 = this.formBuilder.group({
       text: ['FOO', [Validators.required]],
     })
-
-    setTimeout(() => {
-      this.formGroup.get('text').setValidators([Validators.required]);
-    }, 2000);
-
   }
 
 }

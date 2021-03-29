@@ -6,19 +6,14 @@ import {
   OnChanges,
   SimpleChanges
 } from '@angular/core';
-import {getFirstErrorFromControl} from './v-input.models';
-import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {NgControl} from '@angular/forms';
 import {VInputControls} from '../v-input-controls';
 
-// TODO: v-form-control
-@UntilDestroy()
 @Component({
   selector: 'v-forms-input',
   templateUrl: './v-input.component.html',
   styleUrls: ['./v-input.component.scss'],
 })
-export class VInputComponent implements AfterContentInit, OnChanges {
+export class VInputComponent implements AfterContentInit {
 
   uid: string;
 
@@ -30,25 +25,11 @@ export class VInputComponent implements AfterContentInit, OnChanges {
   @ContentChild(VInputControls) child: VInputControls<any>;
 
   ngAfterContentInit(): void {
-    this.setup();
-    this.handleErrors(this.child.ngControl);
-  }
-
-  private handleErrors(control: NgControl) {
-    if (!control) {
-      throw Error('NgControl is null!');
+    if (!this.child) {
+      throw new Error(`${this.constructor.name}: Child component is missing!`);
+    } else {
+      this.setup();
     }
-
-    if (control && control.valueChanges) {
-      this.firstError = getFirstErrorFromControl(control)?.key;
-      control.valueChanges.pipe(untilDestroyed(this)).subscribe(() => {
-        this.firstError = getFirstErrorFromControl(control)?.key;
-      });
-    }
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('Changes', changes);
   }
 
   isRequired() {

@@ -13,6 +13,7 @@ import {
   ScreenCountryPercentageComponent
 } from './screens/screen-country-percentage/screen-country-percentage.component';
 import {ScreenAddressComponent} from './screens/screen-address/screen-address.component';
+import {ScreenAddressComplexComponent} from './screens/screen-address-complex/screen-address-complex.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'screen-address',
     component: ScreenAddressComponent
+  },
+  {
+    path: 'screen-address-complex',
+    component: ScreenAddressComplexComponent
   }
 ];
 

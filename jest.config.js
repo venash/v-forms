@@ -5,6 +5,7 @@ module.exports = {
     '<rootDir>/libs/v-logger',
     '<rootDir>/libs/v-debug-tools',
     '<rootDir>/libs/v-utils',
-    '<rootDir>/libs/v-complex-forms'
+    '<rootDir>/libs/v-complex-forms',
+    '<rootDir>/libs/country'
   ]
 };

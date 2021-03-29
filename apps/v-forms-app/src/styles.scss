@@ -28,3 +28,10 @@ header {
 @import "styles/layout";
 @import "styles/typography";
 @import "~@ng-select/ng-select/themes/default.theme.css";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap/scss/grid";
+@import '~bootstrap/scss/utilities/flex';

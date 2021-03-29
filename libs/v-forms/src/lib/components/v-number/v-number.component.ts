@@ -1,7 +1,7 @@
 import {Component, Input, Optional, Self} from '@angular/core';
 import {VBaseComponent} from '../v-base.component';
 import {VInputControls} from '../v-input-controls';
-import {NgControl} from "@angular/forms";
+import {NgControl} from '@angular/forms';
 
 @Component({
   selector: 'v-forms-number',

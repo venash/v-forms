@@ -1,11 +1,14 @@
 <div class="screen-content">
 
-  <div class="screen-content-inner">
-    <h4>Address</h4>
-    <venash-forms-address>
+  <div class="screen-content-inner" [formGroup]="formGroup">
 
+    <h4>Address</h4>
+    <venash-forms-address formControlName="address">
     </venash-forms-address>
 
+    <v-form-group-debugger [formGroup]="formGroup">
+
+    </v-form-group-debugger>
 
   </div>
 
